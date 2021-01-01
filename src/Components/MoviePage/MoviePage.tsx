@@ -15,7 +15,7 @@ const MoviePage = () => {
     id: string;
   }
   const [movie, setMovie] = useState<any>(null);
-  const [relatedMovies, setRelatedMovies] = useState<Set<any>>(new Set());
+  const [relatedMovies, setRelatedMovies] = useState<Array<any>>([]);
   const { currentUser } = useContext(AuthContext);
   const { id } = useParams<ParamTypes>();
   useEffect(() => {
@@ -27,6 +27,7 @@ const MoviePage = () => {
       return fetchMovie();
     }
   }, [id, currentUser]);
+
   useEffect(() => {
     if (currentUser) {
       const fetchRelatedMovies = () => {
@@ -36,7 +37,7 @@ const MoviePage = () => {
           });
         }
       };
-      setRelatedMovies(new Set());
+      setRelatedMovies([]);
       return fetchRelatedMovies();
     }
   }, [movie, currentUser]);
@@ -53,9 +54,10 @@ const MoviePage = () => {
         <Col className="p-0">
           <p className="text-left m-3">{movie.storyline}</p>
           <h3 className="text-left mt-4 ml-3">Related Movies</h3>
-          {Array.from(relatedMovies).map((movie: any, index: number) => {
+          {relatedMovies.map((movie: any, index: number) => {
             return (
               <MovieCard
+                key={index}
                 title={movie.title}
                 storyline={movie.storyline}
                 url={movie.posterurl}
