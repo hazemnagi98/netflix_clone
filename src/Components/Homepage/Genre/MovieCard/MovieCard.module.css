@@ -1,0 +1,36 @@
+.Media {
+    height: 200px;
+    object-fit: cover;
+    opacity: 0.4;
+    border-radius: 10px;
+    min-width: 130px;
+    cursor: pointer;
+}
+
+.Title {
+    color: white;
+    position: absolute;
+    bottom: 10%;
+    font-size: 10px;
+    text-align: 'left';
+    left: 4%;
+}
+
+.Description {
+    color: white;
+    position: absolute;
+    bottom: 10%;
+    font-size: 10px;
+    text-align: 'left';
+    left: 4%;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    height: 30px;
+    overflow-x: auto;
+}
+
+.Description::-webkit-scrollbar {
+    display: none;
+}

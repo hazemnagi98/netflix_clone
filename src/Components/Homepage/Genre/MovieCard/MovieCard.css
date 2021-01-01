@@ -1,0 +1,11 @@
+.OverlayCard {
+    background: linear-gradient(grey 50%, black);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.OverlayHoveredCard {
+    background: linear-gradient(grey 30%, black) !important;
+    overflow: hidden !important;
+    border-radius: 10px !important;
+}

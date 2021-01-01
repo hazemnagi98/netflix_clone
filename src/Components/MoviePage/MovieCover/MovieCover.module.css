@@ -1,0 +1,56 @@
+.Media {
+    width: 98.4vw;
+    max-height: 300px;
+    opacity: 0.4;
+    min-width: 130px;
+    min-height: 300px;
+}
+
+.Title {
+    color: white;
+    position: absolute;
+    bottom: 10%;
+    font-size: 24px;
+    text-align: 'left';
+    left: 4%;
+}
+
+.BackButton {
+    background-color: transparent !important;
+    border: none !important;
+    position: absolute;
+    top: 4%;
+    left: 1%;
+    height: 40px;
+    width: 40px;
+    padding: 0px;
+}
+
+.BackButton :focus {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.BackButton :hover {
+    border: none !important;
+}
+
+.AddButton {
+    width: 200px !important;
+    color: black !important;
+    background-color: white !important;
+    position: absolute !important;
+    bottom: 8% !important;
+    right: 3% !important;
+    border-radius: 0px !important;
+}
+
+.AddButton :hover {
+    background-color: white !important;
+    color: black !important;
+}
+
+.AddButton :focus {
+    box-shadow: none !important;
+    border: none !important;
+}

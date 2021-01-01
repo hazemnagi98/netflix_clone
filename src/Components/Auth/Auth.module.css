@@ -1,0 +1,28 @@
+.Form {
+    border: 1px solid black;
+    padding: 15%;
+    margin-top: 18%;
+}
+
+.SignInButton {
+    color: white !important;
+    background-color: black !important;
+    border-radius: 0px !important;
+}
+
+.SignUpButton {
+    color: black !important;
+    background-color: white !important;
+    border-radius: 0px !important;
+}
+
+.Input {
+    border: 1px solid black !important;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1;
+    /* Firefox */
+}

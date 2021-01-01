@@ -1,0 +1,9 @@
+.Overlay {
+    background: linear-gradient(grey 50%, black);
+    overflow: hidden;
+}
+
+.OverlayHovered {
+    background: linear-gradient(grey 30%, black) !important;
+    overflow: hidden !important;
+}
