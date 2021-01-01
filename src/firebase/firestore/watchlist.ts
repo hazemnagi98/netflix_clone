@@ -16,13 +16,13 @@ export const getWatchlist = (setWatchlist: any, uid: string) => {
     .collection("watchlist")
     .doc(uid)
     .onSnapshot((doc: any) => {
-      const moviesArr: any[] = [];
-      doc.data().movies.forEach((movie: any) => {
-        if (doc.exists) {
+      if (doc.exists) {
+        const moviesArr: any[] = [];
+        doc.data().movies.forEach((movie: any) => {
           moviesArr.push(movie);
-        }
-      });
-      setWatchlist(moviesArr);
+        });
+        setWatchlist(moviesArr);
+      }
     });
   return unsubscribe;
 };
