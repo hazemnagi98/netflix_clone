@@ -30,7 +30,7 @@ const Auth: React.FC = () => {
       try {
         await auth.createUserWithEmailAndPassword(email, password);
         await auth.currentUser?.getIdToken(true);
-        window.location.href = "/homepage";
+        // window.location.href = "/homepage";
       } catch (error) {
         console.log(error);
       }
